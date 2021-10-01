@@ -32,7 +32,7 @@
                 <div class="row">
                     <h1 class="text-center fw-bolder title"><span class="text-life-dark-pink">樂退</span><span
                             class="text-life-blue">完美</span>人生</h1>
-                    <div class="bg-wall pt-4 pb-2 position-relative bg-light">
+                    <div class="bg-wall pt-4 pb-2 position-relative bg-light" id="bgWall">
                         <div class="col-12 position-relative">
                             <div class="life-line">
                                 <div class="row justify-content-between g-0">
@@ -626,7 +626,7 @@
         window.onload = function () {
             var IMAGE_URL;
             function takeScreenshot() {
-                var shareContent = document.getElementById('letter');//需要截图的包裹的（原生的）DOM 对象
+                var shareContent = document.getElementById('bgWall');//需要截图的包裹的（原生的）DOM 对象
                 var width = shareContent.offsetWidth; //获取dom 宽度
                 var height = shareContent.offsetHeight; //获取dom 高度
                 var canvas = document.createElement("canvas"); //创建一个canvas节点
