@@ -1,0 +1,155 @@
+.bg-life-light-pink {
+  background-color: pink !important;
+}
+
+.bg-light {
+  background-color: #fff !important;
+}
+
+canvas {
+  width: 100%;
+  height: 100%;
+}
+
+.lifebg-fixed-bottom {
+  background: no-repeat;
+  background-size: auto;
+  background-position: 50% bottom;
+}
+
+.bg-wapper p {
+  margin: 0;
+}
+
+.bg-wapper .pre {
+  white-space: pre-line;
+}
+
+.bg-wapper .form-control {
+  padding: 0;
+}
+
+.bg-wapper .title {
+  letter-spacing: 3px;
+  font-size: 42px;
+  font-family: "Meng";
+}
+
+.bg-wapper h3 {
+  font-size: 18px;
+  font-weight: bolder;
+  color: #2c65c2;
+}
+
+.bg-wapper .bg-wall {
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.bg-wapper .life-line .life-title {
+  font-family: "Meng";
+  font-size: 18px;
+  width: 40px;
+  margin: 0 auto;
+}
+
+@media (min-width: 576px) {
+  .bg-wapper .life-line .life-title {
+    width: 100%;
+    font-size: 20px;
+  }
+}
+
+.bg-wapper .life-line::before {
+  content: "";
+  width: 90%;
+  height: 1.5px;
+  background: #2c65c2;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.bg-wapper .life-line input {
+  border: 0;
+  background: #fff;
+  text-align: center;
+  padding: 0;
+  font-weight: bolder;
+  color: #2c65c2;
+}
+
+.bg-wapper .life-line span {
+  white-space: nowrap;
+}
+
+.bg-wapper .life-line .dot-box::before,
+.bg-wapper .life-line .dot-box-first::before {
+  content: "";
+  width: 8px;
+  height: 15px;
+  background: #2c65c2;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.bg-wapper .life-line .dot-box-first::before {
+  content: "";
+  left: 30%;
+}
+
+.bg-wapper .decoration-icon img:nth-child(odd) {
+  position: absolute;
+  right: -10px;
+  bottom: 8px;
+  width: 50px;
+}
+
+@media (min-width: 768px) {
+  .bg-wapper .decoration-icon img:nth-child(odd) {
+    width: 70px;
+  }
+}
+
+.bg-wapper .decoration-icon img:nth-child(even) {
+  position: absolute;
+  right: -15px;
+  top: 280px;
+  width: 50px;
+}
+
+@media (min-width: 768px) {
+  .bg-wapper .decoration-icon img:nth-child(even) {
+    width: 70px;
+    top: 200px;
+  }
+}
+
+.bg-wapper .name,
+.bg-wapper .date {
+  border: 0;
+  border-bottom: 1.5px solid #2c65c2;
+  width: 70%;
+  color: #2c65c2;
+  font-weight: bolder;
+}
+
+.bg-wapper .golden-num {
+  font-family: "NotoSan";
+  display: block;
+  margin-top: 4px;
+  font-size: 14px;
+}
+
+@media (min-width: 576px) {
+  .bg-wapper .golden-num {
+    font-family: "NotoSan";
+    position: absolute;
+    right: 0;
+    bottom: 0;
+  }
+}
+/*# sourceMappingURL=all.css.map */
