@@ -1,0 +1,47 @@
+body,html,h1,h2,h3,p{
+    margin: 0;
+    padding: 0;
+}
+
+// @media (min-width: 1200px){}
+// @media (min-width: 992px){}
+// @media (min-width: 768px){}
+// @media (min-width: 576px){}
+
+*, :after, :before {
+    box-sizing: border-box;
+}
+
+.container{
+    width: 100%;
+    padding: 30px;
+    @media (min-width: 1200px){
+        max-width: 1140px;
+    }
+    @media (min-width: 992px){
+        max-width: 960px;
+    }
+    @media (min-width: 768px){
+        max-width: 720px;
+    }
+    @media (min-width: 576px){
+        max-width: 540px;
+    }
+}
+
+
+.bg-happy-pink{
+    background-color: pink;
+}
+
+.bg-fixbottom{
+    background: no-repeat;
+    background-size: auto;
+    background-position: 50% bottom;
+}
+
+.bg-wall{
+    background-image: url('./assets/bg-wall.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
