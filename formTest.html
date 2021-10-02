@@ -462,6 +462,7 @@
         </div>
     </div>
     <button id="save-local">click</button>
+    <img src="" class="copyImage">
     <a id="dl-hidden" style="display:none;"></a>
 </body>
 <script src="./html2canvas.js"></script>
@@ -494,6 +495,7 @@
                 IMAGE_URL = canvas.toDataURL("image/png");
                 // document.querySelector('.copyImage').setAttribute('src', IMAGE_URL);
             })
+            downloadBase64(IMAGE_URL, 'demo.png')
         }
 
         function dataURLtoBlob(dataurl) {
@@ -532,7 +534,6 @@
         var curStyle = 0;
         document.querySelector('#save-local').addEventListener('click',function (e) {
             takeScreenshot();
-            downloadBase64(IMAGE_URL, 'demo.png')
         })
     }
 </script>
