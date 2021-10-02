@@ -8,11 +8,14 @@
     <title>Document</title>
     <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="./assets/css/all.css"> -->
+    <style>
+
+    </style>
 </head>
 
 <body>
     <div id="download">
-        <div class="bg-wapper bg-life-light-pink lifebg-fixed-bottom p-3">
+        <div class="">
             <div class="container">
                 <div class="row">
                     <h1 class="text-center fw-bolder title"><span class="text-life-dark-pink">樂退</span><span
@@ -328,7 +331,9 @@
                 };
                 html2canvas(shareContent, opts).then(function (canvas) {
                     IMAGE_URL = canvas.toDataURL("image/png");
+                    downloadBase64(IMAGE_URL, 'demo.png')
                 })
+                
             }
 
             function dataURLtoBlob(dataurl) {
@@ -361,10 +366,9 @@
                 }
             }
 
-            takeScreenshot();
-
             document.querySelector('#btn').addEventListener('click',function (e) {
-                downloadBase64(IMAGE_URL, 'demo.png')
+                takeScreenshot();
+                
             })
         }
     </script>
