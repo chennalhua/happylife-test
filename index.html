@@ -1,344 +1,346 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=759px, initial-scale=1.0">
-    <title>Document</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no" id="viewport">
+    <script src="https://unpkg.com/jspdf@latest/dist/jspdf.umd.min.js"></script>
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0" crossorigin="anonymous">
     <link rel="stylesheet" href="./assets/css/all.css">
-    <!-- <link rel="stylesheet" href="./assets/css/happy.css"> -->
-    <style>
-
-    </style>
 </head>
+<style>
+</style>
 
 <body>
-    <div id="download">
-        <div class="bg-wapper">
-            <div class="container">
-                <div class="row">
-                    <h1 class="text-center fw-bolder title"><span class="text-life-dark-pink">樂退</span><span
-                            class="text-life-blue">完美</span>人生</h1>
-                    <div class="bg-wall pt-4 pb-2 position-relative bg-light">
-                        <div class="col-12 position-relative">
-                            <div class="life-line">
-                                <div class="row justify-content-between g-0">
-                                    <div class="col-2 position-relative">
-                                        <p class="fw-bolder mb-3 text-center dot-box-first life-title">現在的我</p>
-                                        <div
-                                            class="d-flex flex-column flex-md-row align-items-center justify-content-center text-center mt-5">
-                                            <span class="d-block">【<input
-                                                    class="form-control w-50 d-inline-block" />】</span>
-                                            <p class="">歲</p>
-                                        </div>
+    <div class="bg-wapper bg-life-light-pink lifebg-fixed-bottom p-3" id="downloadJPG">
+        <div class="container">
+            <div class="row">
+                <h1 class="text-center fw-bolder title"><span class="text-life-dark-pink">樂退</span><span
+                        class="text-life-blue">完美</span>人生</h1>
+                <div class="bg-wall pt-4 pb-2 position-relative bg-light">
+                    <div class="decoration-icon">
+                        <!-- <img src="img1.svg" alt="裝飾圖-菱形" />
+                        <img src="img2.svg" alt="裝試圖-米型" /> -->
+                    </div>
+                    <div class="col-12 position-relative">
+                        <div class="life-line">
+                            <div class="row justify-content-between g-0">
+                                <div class="col-2 position-relative">
+                                    <p class="fw-bolder mb-3 text-center dot-box-first life-title">現在的我</p>
+                                    <div
+                                        class="d-flex flex-column flex-md-row align-items-center justify-content-center text-center mt-5">
+                                        <span class="d-block">【<input
+                                                class="form-control w-50 d-inline-block" />】</span>
+                                        <p class="">歲</p>
                                     </div>
-                                    <div class="col-2">
-                                        <p class="text-life-dark-pink fw-bolder mb-3 text-center life-title">辛勤工作</p>
+                                </div>
+                                <div class="col-2">
+                                    <p class="text-life-dark-pink fw-bolder mb-3 text-center life-title">辛勤工作</p>
+                                </div>
+                                <div class="col-2 position-relative">
+                                    <p class="fw-bolder mb-3 text-center dot-box life-title">預計退休</p>
+                                    <div
+                                        class="d-flex flex-column flex-md-row align-items-center justify-content-center text-center mt-5">
+                                        <span class="d-block">【<input
+                                                class="form-control w-50 d-inline-block" />】</span>
+                                        <p class="">歲</p>
                                     </div>
-                                    <div class="col-2 position-relative">
-                                        <p class="fw-bolder mb-3 text-center dot-box life-title">預計退休</p>
-                                        <div
-                                            class="d-flex flex-column flex-md-row align-items-center justify-content-center text-center mt-5">
-                                            <span class="d-block">【<input
-                                                    class="form-control w-50 d-inline-block" />】</span>
-                                            <p class="">歲</p>
-                                        </div>
-                                    </div>
-                                    <div class="col-2">
-                                        <p class="text-life-dark-pink fw-bolder mb-3 text-center life-title">退休生活</p>
-                                    </div>
-                                    <div class="col-2 position-relative">
-                                        <p class="fw-bolder mb-3 text-center dot-box life-title">平均壽命</p>
-                                        <div
-                                            class="d-flex flex-column flex-md-row align-items-center justify-content-center text-center mt-5">
-                                            <span class="d-block">【<input
-                                                    class="form-control w-50 d-inline-block" />】</span>
-                                            <p class="">歲</p>
-                                        </div>
+                                </div>
+                                <div class="col-2">
+                                    <p class="text-life-dark-pink fw-bolder mb-3 text-center life-title">退休生活</p>
+                                </div>
+                                <div class="col-2 position-relative">
+                                    <p class="fw-bolder mb-3 text-center dot-box life-title">平均壽命</p>
+                                    <div
+                                        class="d-flex flex-column flex-md-row align-items-center justify-content-center text-center mt-5">
+                                        <span class="d-block">【<input
+                                                class="form-control w-50 d-inline-block" />】</span>
+                                        <p class="">歲</p>
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                        <form action="" id="form">
-                            <div class="col-12 my-3">
-                                <h3>1. 您習慣善用哪些投資理財管道來增加個人財富？</h3>
-                                <div class="first-option d-flex flex-wrap">
-                                    <div class="form-check m-2">
-                                        <input class="form-check-input" type="checkbox" name="firstOption"
-                                            id="bankSavings" />
-                                        <label class="form-check-label" for="bankSavings">銀行存款</label>
-                                    </div>
-                                    <div class="form-check m-2">
-                                        <input class="form-check-input" type="checkbox" name="firstOption"
-                                            id="insurerSavings" />
-                                        <label class="form-check-label" for="insurerSavings">保險儲蓄</label>
-                                    </div>
-                                    <div class="form-check m-2">
-                                        <input class="form-check-input" type="checkbox" name="firstOption" id="stock" />
-                                        <label class="form-check-label" for="stock">股票</label>
-                                    </div>
-                                    <div class="form-check m-2">
-                                        <input class="form-check-input" type="checkbox" name="firstOption" id="fund" />
-                                        <label class="form-check-label" for="fund">基金</label>
-                                    </div>
-                                    <div class="form-check m-2">
-                                        <input class="form-check-input" type="checkbox" name="firstOption"
-                                            id="propertyAsset" />
-                                        <label class="form-check-label" for="propertyAsset">不動產</label>
-                                    </div>
-                                    <div class="form-check m-2 d-flex justify-content-around">
-                                        <input class="form-check-input" type="checkbox" name="firstOption"
-                                            id="firstOther" />
-                                        <label class="form-check-label" for="firstOther">其他</label>
-                                        <input class="form-control w-80" type="text" id="firstOther" />
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-12 my-3">
-                                <h3>2. 請問您退休後最想做哪些事呢？</h3>
-                                <div class="secondary-option d-flex flex-wrap">
-                                    <div class="form-check m-2">
-                                        <input class="form-check-input" type="checkbox" name="secondaryOption"
-                                            id="travelWorld" />
-                                        <label class="form-check-label" for="travelWorld">環遊世界</label>
-                                    </div>
-                                    <div class="form-check m-2">
-                                        <input class="form-check-input" type="checkbox" name="secondaryOption"
-                                            id="learn" />
-                                        <label class="form-check-label" for="learn">學習新知</label>
-                                    </div>
-                                    <div class="form-check m-2">
-                                        <input class="form-check-input" type="checkbox" name="secondaryOption"
-                                            id="charity" />
-                                        <label class="form-check-label" for="charity">公益活動</label>
-                                    </div>
-                                    <div class="form-check m-2">
-                                        <input class="form-check-input" type="checkbox" name="secondaryOption"
-                                            id="secondaryBusiness" />
-                                        <label class="form-check-label" for="secondaryBusiness">發展事業第二春</label>
-                                    </div>
-                                    <div class="form-check m-2">
-                                        <input class="form-check-input" type="checkbox" name="secondaryOption"
-                                            id="takeCareKid" />
-                                        <label class="form-check-label" for="takeCareKid">含飴弄孫</label>
-                                    </div>
-                                    <div class="form-check m-2">
-                                        <input class="form-check-input" type="checkbox" name="secondaryOption"
-                                            id="helpForChildren" />
-                                        <label class="form-check-label" for="helpForChildren">協助子女成家立業</label>
-                                    </div>
-                                    <div class="form-check m-2 d-flex justify-content-around">
-                                        <input class="form-check-input" type="checkbox" name="secondaryOption"
-                                            id="Secondaryother" />
-                                        <label class="form-check-label" for="Secondaryother">其他</label>
-                                        <input class="form-control w-80" type="text" />
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-12 my-3">
-                                <h3>3. 對於退休生活費的來源，您認為最有保障的退休收入是？</h3>
-                                <div class="third-option d-flex flex-wrap">
-                                    <div class="form-check m-2">
-                                        <input class="form-check-input" type="checkbox" name="thirdOption"
-                                            id="thirdOne" />
-                                        <label class="form-check-label" for="thirdOne">政府的老人年金</label>
-                                    </div>
-                                    <div class="form-check m-2">
-                                        <input class="form-check-input" type="checkbox" name="thirdOption"
-                                            id="thirdTwo" />
-                                        <label class="form-check-label" for="thirdTwo">公司的退休金</label>
-                                    </div>
-                                    <div class="form-check m-2">
-                                        <input class="form-check-input" type="checkbox" name="thirdOption"
-                                            id="thirdThree" />
-                                        <label class="form-check-label" for="thirdThree">子女的奉養</label>
-                                    </div>
-                                    <div class="form-check m-2">
-                                        <input class="form-check-input" type="checkbox" name="thirdOption"
-                                            id="thirdFour" />
-                                        <label class="form-check-label" for="thirdFour">自己規劃的退休金</label>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-12 my-3">
-                                <h3>4. 您認為多少退休金能夠讓您安心退休呢？</h3>
-                                <div class="four-option d-flex flex-wrap">
-                                    <div class="form-check m-2">
-                                        <input class="form-check-input" type="radio" name="fourOption" id="500" />
-                                        <label class="form-check-label" for="500">500 萬元</label>
-                                    </div>
-                                    <div class="form-check m-2">
-                                        <input class="form-check-input" type="radio" name="fourOption" id="1000" />
-                                        <label class="form-check-label" for="1000">1,000 萬元</label>
-                                    </div>
-                                    <div class="form-check m-2">
-                                        <input class="form-check-input" type="radio" name="fourOption" id="1200" />
-                                        <label class="form-check-label" for="1200">1,200 萬元</label>
-                                    </div>
-                                    <div class="form-check m-2">
-                                        <input class="form-check-input" type="radio" name="fourOption" id="2000" />
-                                        <label class="form-check-label" for="2000">2,000 萬元以上</label>
-                                    </div>
-                                    <div class="form-check m-2 d-flex justify-content-around">
-                                        <input class="form-check-input" type="radio" name="fourOption" id="fourOther" />
-                                        <label class="form-check-label" for="fourOther">其他</label>
-                                        <input class="form-control w-80" type="text" id="fourOther" />
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-12 my-3">
-                                <h3>5. 您希望退休後每個月的生活費用是多少？</h3>
-                                <div class="five-option d-flex flex-wrap">
-                                    <div class="form-check m-2">
-                                        <input class="form-check-input" type="radio" name="fiveOption" id="2" />
-                                        <label class="form-check-label" for="2">2 萬元</label>
-                                    </div>
-                                    <div class="form-check m-2">
-                                        <input class="form-check-input" type="radio" name="fiveOption" id="3" />
-                                        <label class="form-check-label" for="3">3 萬元</label>
-                                    </div>
-                                    <div class="form-check m-2">
-                                        <input class="form-check-input" type="radio" name="fiveOption" id="4" />
-                                        <label class="form-check-label" for="4">4 萬元</label>
-                                    </div>
-                                    <div class="form-check m-2">
-                                        <input class="form-check-input" type="radio" name="fiveOption" id="5" />
-                                        <label class="form-check-label" for="5">5 萬元以上</label>
-                                    </div>
-                                    <div class="form-check m-2 d-flex justify-content-around">
-                                        <input class="form-check-input" type="radio" name="fiveOption" id="fiveOther" />
-                                        <label class="form-check-label" for="fiveOther">其他</label>
-                                        <input class="form-control w-80" type="text" id="fiveOther" />
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-12 my-3">
-                                <h3>6. 您想了解的投資理財資訊有哪些？</h3>
-                                <div class="six-option d-flex flex-wrap">
-                                    <div class="form-check m-2">
-                                        <input class="form-check-input" type="checkbox" name="sixOption" id="sixOne" />
-                                        <label class="form-check-label" for="sixOne">個人儲蓄投資理財</label>
-                                    </div>
-                                    <div class="form-check m-2">
-                                        <input class="form-check-input" type="checkbox" name="sixOption" id="sixTwo" />
-                                        <label class="form-check-label" for="sixTwo">節稅資訊</label>
-                                    </div>
-                                    <div class="form-check m-2">
-                                        <input class="form-check-input" type="checkbox" name="sixOption"
-                                            id="sixThree" />
-                                        <label class="form-check-label" for="sixThree">退休理財生活費規劃</label>
-                                    </div>
-                                    <div class="form-check m-2">
-                                        <input class="form-check-input" type="checkbox" name="sixOption" id="sixFour" />
-                                        <label class="form-check-label" for="sixFour">房貸理財提前</label>
-                                    </div>
-                                    <div class="form-check m-2">
-                                        <input class="form-check-input" type="checkbox" name="sixOption" id="sixFive" />
-                                        <label class="form-check-label" for="sixFive">清償計畫</label>
-                                    </div>
-                                    <div class="form-check m-2">
-                                        <input class="form-check-input" type="checkbox" name="sixOption" id="sixSix" />
-                                        <label class="form-check-label" for="sixSix">子女教育基金準備</label>
-                                    </div>
-                                    <div class="form-check m-2 d-flex justify-content-around">
-                                        <input class="form-check-input" type="checkbox" name="sixOption"
-                                            id="sixOther" />
-                                        <label class="form-check-label" for="sixOther">其他</label>
-                                        <input class="form-control w-80" type="text" id="sixOther" />
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-12 my-3">
-                                <h3>7. 依您目前的經濟能力，每月可提撥多少預算規劃儲蓄與投資?</h3>
-                                <div class="steven-option d-flex flex-wrap">
-                                    <div class="form-check m-2">
-                                        <input class="form-check-input" type="radio" name="stevenOption"
-                                            id="stevenOne" />
-                                        <label class="form-check-label" for="stevenOne">5,000 元</label>
-                                    </div>
-                                    <div class="form-check m-2">
-                                        <input class="form-check-input" type="radio" name="stevenOption"
-                                            id="stevenTwo" />
-                                        <label class="form-check-label" for="stevenTwo">10,000 元</label>
-                                    </div>
-                                    <div class="form-check m-2">
-                                        <input class="form-check-input" type="radio" name="stevenOption"
-                                            id="stevenThree" />
-                                        <label class="form-check-label" for="stevenThree">20,000 元</label>
-                                    </div>
-                                    <div class="form-check m-2">
-                                        <input class="form-check-input" type="radio" name="stevenOption"
-                                            id="stevenFour" />
-                                        <label class="form-check-label" for="stevenFour">30,000 元</label>
-                                    </div>
-                                    <div class="form-check m-2">
-                                        <input class="form-check-input" type="radio" name="stevenOption"
-                                            id="stevenFive" />
-                                        <label class="form-check-label" for="stevenFive">50,000 元以上</label>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-12 mb-2 text-center row px-md-5">
-                                <div class="my-3 col-md-6">
-                                    <label for="name" class="text-life-blue fw-bolder">您的姓名：</label>
-                                    <input type="text" id="name" class="name" />
-                                </div>
-                                <div class="my-3 col-md-6">
-                                    <label for="date" class="text-life-blue fw-bolder">填寫日期：</label>
-                                    <input type="date" id="date" class="date" value />
-                                </div>
-                            </div>
-                        </form>
-                        <div class="col-12">
                         </div>
                     </div>
-                    <footer class="text-center position-relative mt-2">
-                        <small class="text-light golden-num">公勝(核)2021090001號</small>
-                    </footer>
+                    <form action="" id="form">
+                        <div class="col-12 my-3">
+                            <h3>1. 您習慣善用哪些投資理財管道來增加個人財富？</h3>
+                            <div class="first-option d-flex flex-wrap">
+                                <div class="form-check m-2">
+                                    <input class="form-check-input" type="checkbox" name="firstOption" id="bankSavings" />
+                                    <label class="form-check-label" htmlFor="bankSavings">銀行存款</label>
+                                </div>
+                                <div class="form-check m-2">
+                                    <input class="form-check-input" type="checkbox" name="firstOption"
+                                        id="insurerSavings" />
+                                    <label class="form-check-label" htmlFor="insurerSavings">保險儲蓄</label>
+                                </div>
+                                <div class="form-check m-2">
+                                    <input class="form-check-input" type="checkbox" name="firstOption" id="stock" />
+                                    <label class="form-check-label" htmlFor="stock">股票</label>
+                                </div>
+                                <div class="form-check m-2">
+                                    <input class="form-check-input" type="checkbox" name="firstOption" id="fund" />
+                                    <label class="form-check-label" htmlFor="fund">基金</label>
+                                </div>
+                                <div class="form-check m-2">
+                                    <input class="form-check-input" type="checkbox" name="firstOption" id="propertyAsset" />
+                                    <label class="form-check-label" htmlFor="propertyAsset">不動產</label>
+                                </div>
+                                <div class="form-check m-2 d-flex justify-content-around">
+                                    <input class="form-check-input" type="checkbox" name="firstOption" id="firstOther" />
+                                    <label class="form-check-label" htmlFor="firstOther">其他</label>
+                                    <input class="form-control w-80" type="text" id="firstOther" />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 my-3">
+                            <h3>2. 請問您退休後最想做哪些事呢？</h3>
+                            <div class="secondary-option d-flex flex-wrap">
+                                <div class="form-check m-2">
+                                    <input class="form-check-input" type="checkbox" name="secondaryOption"
+                                        id="travelWorld" />
+                                    <label class="form-check-label" htmlFor="travelWorld">環遊世界</label>
+                                </div>
+                                <div class="form-check m-2">
+                                    <input class="form-check-input" type="checkbox" name="secondaryOption" id="learn" />
+                                    <label class="form-check-label" htmlFor="learn">學習新知</label>
+                                </div>
+                                <div class="form-check m-2">
+                                    <input class="form-check-input" type="checkbox" name="secondaryOption" id="charity" />
+                                    <label class="form-check-label" htmlFor="charity">公益活動</label>
+                                </div>
+                                <div class="form-check m-2">
+                                    <input class="form-check-input" type="checkbox" name="secondaryOption"
+                                        id="secondaryBusiness" />
+                                    <label class="form-check-label" htmlFor="secondaryBusiness">發展事業第二春</label>
+                                </div>
+                                <div class="form-check m-2">
+                                    <input class="form-check-input" type="checkbox" name="secondaryOption"
+                                        id="takeCareKid" />
+                                    <label class="form-check-label" htmlFor="takeCareKid">含飴弄孫</label>
+                                </div>
+                                <div class="form-check m-2">
+                                    <input class="form-check-input" type="checkbox" name="secondaryOption"
+                                        id="helpForChildren" />
+                                    <label class="form-check-label" htmlFor="helpForChildren">協助子女成家立業</label>
+                                </div>
+                                <div class="form-check m-2 d-flex justify-content-around">
+                                    <input class="form-check-input" type="checkbox" name="secondaryOption"
+                                        id="Secondaryother" />
+                                    <label class="form-check-label" htmlFor="Secondaryother">其他</label>
+                                    <input class="form-control w-80" type="text" />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 my-3">
+                            <h3>3. 對於退休生活費的來源，您認為最有保障的退休收入是？</h3>
+                            <div class="third-option d-flex flex-wrap">
+                                <div class="form-check m-2">
+                                    <input class="form-check-input" type="checkbox" name="thirdOption" id="thirdOne" />
+                                    <label class="form-check-label" htmlFor="thirdOne">政府的老人年金</label>
+                                </div>
+                                <div class="form-check m-2">
+                                    <input class="form-check-input" type="checkbox" name="thirdOption" id="thirdTwo" />
+                                    <label class="form-check-label" htmlFor="thirdTwo">公司的退休金</label>
+                                </div>
+                                <div class="form-check m-2">
+                                    <input class="form-check-input" type="checkbox" name="thirdOption" id="thirdThree" />
+                                    <label class="form-check-label" htmlFor="thirdThree">子女的奉養</label>
+                                </div>
+                                <div class="form-check m-2">
+                                    <input class="form-check-input" type="checkbox" name="thirdOption" id="thirdFour" />
+                                    <label class="form-check-label" htmlFor="thirdFour">自己規劃的退休金</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 my-3">
+                            <h3>4. 您認為多少退休金能夠讓您安心退休呢？</h3>
+                            <div class="four-option d-flex flex-wrap">
+                                <div class="form-check m-2">
+                                    <input class="form-check-input" type="radio" name="fourOption" id="500" />
+                                    <label class="form-check-label" htmlFor="500">500 萬元</label>
+                                </div>
+                                <div class="form-check m-2">
+                                    <input class="form-check-input" type="radio" name="fourOption" id="1000" />
+                                    <label class="form-check-label" htmlFor="1000">1,000 萬元</label>
+                                </div>
+                                <div class="form-check m-2">
+                                    <input class="form-check-input" type="radio" name="fourOption" id="1200" />
+                                    <label class="form-check-label" htmlFor="1200">1,200 萬元</label>
+                                </div>
+                                <div class="form-check m-2">
+                                    <input class="form-check-input" type="radio" name="fourOption" id="2000" />
+                                    <label class="form-check-label" htmlFor="2000">2,000 萬元以上</label>
+                                </div>
+                                <div class="form-check m-2 d-flex justify-content-around">
+                                    <input class="form-check-input" type="radio" name="fourOption" id="fourOther" />
+                                    <label class="form-check-label" htmlFor="fourOther">其他</label>
+                                    <input class="form-control w-80" type="text" id="fourOther" />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 my-3">
+                            <h3>5. 您希望退休後每個月的生活費用是多少？</h3>
+                            <div class="five-option d-flex flex-wrap">
+                                <div class="form-check m-2">
+                                    <input class="form-check-input" type="radio" name="fiveOption" id="2" />
+                                    <label class="form-check-label" htmlFor="2">2 萬元</label>
+                                </div>
+                                <div class="form-check m-2">
+                                    <input class="form-check-input" type="radio" name="fiveOption" id="3" />
+                                    <label class="form-check-label" htmlFor="3">3 萬元</label>
+                                </div>
+                                <div class="form-check m-2">
+                                    <input class="form-check-input" type="radio" name="fiveOption" id="4" />
+                                    <label class="form-check-label" htmlFor="4">4 萬元</label>
+                                </div>
+                                <div class="form-check m-2">
+                                    <input class="form-check-input" type="radio" name="fiveOption" id="5" />
+                                    <label class="form-check-label" htmlFor="5">5 萬元以上</label>
+                                </div>
+                                <div class="form-check m-2 d-flex justify-content-around">
+                                    <input class="form-check-input" type="radio" name="fiveOption" id="fiveOther" />
+                                    <label class="form-check-label" htmlFor="fiveOther">其他</label>
+                                    <input class="form-control w-80" type="text" id="fiveOther" />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 my-3">
+                            <h3>6. 您想了解的投資理財資訊有哪些？</h3>
+                            <div class="six-option d-flex flex-wrap">
+                                <div class="form-check m-2">
+                                    <input class="form-check-input" type="checkbox" name="sixOption" id="sixOne" />
+                                    <label class="form-check-label" htmlFor="sixOne">個人儲蓄投資理財</label>
+                                </div>
+                                <div class="form-check m-2">
+                                    <input class="form-check-input" type="checkbox" name="sixOption" id="sixTwo" />
+                                    <label class="form-check-label" htmlFor="sixTwo">節稅資訊</label>
+                                </div>
+                                <div class="form-check m-2">
+                                    <input class="form-check-input" type="checkbox" name="sixOption" id="sixThree" />
+                                    <label class="form-check-label" htmlFor="sixThree">退休理財生活費規劃</label>
+                                </div>
+                                <div class="form-check m-2">
+                                    <input class="form-check-input" type="checkbox" name="sixOption" id="sixFour" />
+                                    <label class="form-check-label" htmlFor="sixFour">房貸理財提前</label>
+                                </div>
+                                <div class="form-check m-2">
+                                    <input class="form-check-input" type="checkbox" name="sixOption" id="sixFive" />
+                                    <label class="form-check-label" htmlFor="sixFive">清償計畫</label>
+                                </div>
+                                <div class="form-check m-2">
+                                    <input class="form-check-input" type="checkbox" name="sixOption" id="sixSix" />
+                                    <label class="form-check-label" htmlFor="sixSix">子女教育基金準備</label>
+                                </div>
+                                <div class="form-check m-2 d-flex justify-content-around">
+                                    <input class="form-check-input" type="checkbox" name="sixOption" id="sixOther" />
+                                    <label class="form-check-label" htmlFor="sixOther">其他</label>
+                                    <input class="form-control w-80" type="text" id="sixOther" />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 my-3">
+                            <h3>7. 依您目前的經濟能力，每月可提撥多少預算規劃儲蓄與投資?</h3>
+                            <div class="steven-option d-flex flex-wrap">
+                                <div class="form-check m-2">
+                                    <input class="form-check-input" type="radio" name="stevenOption" id="stevenOne" />
+                                    <label class="form-check-label" htmlFor="stevenOne">5,000 元</label>
+                                </div>
+                                <div class="form-check m-2">
+                                    <input class="form-check-input" type="radio" name="stevenOption" id="stevenTwo" />
+                                    <label class="form-check-label" htmlFor="stevenTwo">10,000 元</label>
+                                </div>
+                                <div class="form-check m-2">
+                                    <input class="form-check-input" type="radio" name="stevenOption" id="stevenThree" />
+                                    <label class="form-check-label" htmlFor="stevenThree">20,000 元</label>
+                                </div>
+                                <div class="form-check m-2">
+                                    <input class="form-check-input" type="radio" name="stevenOption" id="stevenFour" />
+                                    <label class="form-check-label" htmlFor="stevenFour">30,000 元</label>
+                                </div>
+                                <div class="form-check m-2">
+                                    <input class="form-check-input" type="radio" name="stevenOption" id="stevenFive" />
+                                    <label class="form-check-label" htmlFor="stevenFive">50,000 元以上</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 mb-2 text-center row px-md-5">
+                            <div class="my-3 col-md-6">
+                                <label htmlFor="name" class="text-life-blue fw-bolder">您的姓名：</label>
+                                <input type="text" id="name" class="name" />
+                            </div>
+                            <div class="my-3 col-md-6">
+                                <label htmlFor="date" class="text-life-blue fw-bolder">填寫日期：</label>
+                                <input type="date" id="date" class="date" value />
+                            </div>
+                        </div>
+                    </form>
+                    <div class="col-12">
+                        <button class="btn text-life-blue d-inline" id="save-local">
+                            下載
+                        </button>
+                    </div>
                 </div>
+                <footer class="text-center position-relative mt-2">
+                    <small class="text-light golden-num">公勝(核)2021090001號</small>
+                </footer>
             </div>
         </div>
     </div>
-    <button id="btn">click</button>
-    <a href="" id="click" style="display: none;">下載</a>
-
-    <!-- <script src="https://unpkg.com/html2canvas@1.0.0-rc.4/dist/html2canvas.js"></script> -->
+    <!-- <button type="button" id="pdfDownloader">Download</button> -->
+    <script src="./jquery-3.6.0.min.js"></script>
     <script src="./html2canvas.js"></script>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.0.272/jspdf.debug.js"></script> -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-p34f1UUtsS3wqzfto5wAAmdvj+osOnFyQFpp4Ua3gs/ZVWx6oOypYoCJhGGScy+8"
+        crossorigin="anonymous"></script>
     <script>
         window.onload = function () {
-            var IMAGE_URL;
-            function takeScreenshot() {
-                var shareContent = document.getElementById('download');//需要截图的包裹的（原生的）DOM 对象
-                var width = shareContent.offsetWidth; //获取dom 宽度
-                var height = shareContent.offsetHeight; //获取dom 高度
-                var canvas = document.createElement("canvas"); //创建一个canvas节点
+            let IMAGE_URL;
+            function screen() {
+                setTimeout(function takeScreenshot() {
+                let shareContent = document.getElementById('downloadJPG');//截圖範圍
+                let viewportWidth = document.getElementById("viewport");
+                viewportWidth.setAttribute('content', 'width=795px');
+                if (viewportWidth.getAttribute('content') === 'width=795px') {
+                    let width = shareContent.offsetWidth; //寬度 shareContent.offsetWidth
+                    let height = shareContent.offsetHeight; // 高度 shareContent.offsetHeight
 
-                var scale = 1; //定义任意放大倍数 支持小数
-                canvas.width = width * scale; //定义canvas 宽度 * 缩放
-                canvas.height = height * scale; //定义canvas高度 *缩放
-                canvas.getContext("2d") //获取context,设置scale
+                    let canvas = document.createElement("canvas");
+                    let scale = 4;
+                    canvas.width = width * scale; //寬度 * 縮放
+                    canvas.height = height * scale; //高度 * 縮放
+                    canvas.getContext("2d")
+                    let ctx = canvas.getContext("2d");
+                    ctx.webkitImageSmoothingEnabled = false;
+                    ctx.mozImageSmoothingEnabled = false;
+                    ctx.imageSmoothingEnabled = false;
 
-                // var rect = shareContent.getBoundingClientRect();//获取元素相对于视察的偏移量
-                // canvas.getContext("2d").translate(-rect.left,-rect.top);//设置context位置，值为相对于视窗的偏移量负值，让图片复位
-                var opts = {
-                    scale: scale, // 添加的scale 参数
-                    canvas: canvas, //自定义 canvas
-                    logging: true, //日志开关
-                    width: width, //dom 原始宽度
-                    height: height, //dom 原始高度
-                    backgroundColor: 'transparent',
-                };
-                html2canvas(shareContent, opts).then(function (canvas) {
-                    IMAGE_URL = canvas.toDataURL("image/png");
-                    // document.querySelector('.copyImage').setAttribute('src',IMAGE_URL);
-                    downloadBase64(IMAGE_URL, '合成图.png')
-                })
+                    let opts = {
+                        dpi: 144,
+                        scale: scale,
+                        canvas: canvas,
+                        logging: true,
+                        width: width, //dom 原始寬度
+                        height: height, //dom 原始高度
+                        backgroundColor: 'transparent',
+                        useCORS: true, //解決圖片跨域問題
+                        allowTaint: true,
+                        removeContainer: true,
+                    };
+                    html2canvas(shareContent, opts).then(function (canvas) {
+                        IMAGE_URL = canvas.toDataURL("image/png");
+                        downloadBase64(IMAGE_URL, 'HappyRetiredLife.png');
+                        setTimeout(document.getElementById("viewport").setAttribute("content", "width=device-width, initial-scale=1"),1200);
+                    })
+                }
+            },500);
             }
 
             function dataURLtoBlob(dataurl) {
-                var arr = dataurl.split(','),
+                let arr = dataurl.split(','),
                     mime = arr[0].match(/:(.*?);/)[1],
                     bstr = atob(arr[1]),
                     n = bstr.length,
@@ -350,12 +352,11 @@
             }
 
             function downloadBase64(dataUrl, filename) {
-                var imageFile, href
-                const downloadLink = document.createElement('a')
-                // var downloadLink = document.getElementById('dl-hidden')
+                let imageFile, href
+                const downloadLink = document.createElement('a');
                 try {
-                    var blob = dataURLtoBlob(dataUrl)
-                    var href = window.URL.createObjectURL(blob)
+                    let blob = dataURLtoBlob(dataUrl)
+                    let href = window.URL.createObjectURL(blob)
                     downloadLink.download = filename
                     downloadLink.href = href
                     downloadLink.click()
@@ -364,17 +365,80 @@
                     if (href) {
                         window.URL.revokeObjectURL(href)
                     }
+                    // document.querySelector('#save-a4').setAttribute('style','display:block !important');
                     // downloadLink.remove()
                 }
             }
-
-            document.querySelector('#btn').addEventListener('click',function(){
-                takeScreenshot()
+            document.querySelector('#save-local').addEventListener('click', function (e) {
+                document.getElementById("viewport").setAttribute('content','width=795px');
+                screen();
+                // document.querySelector('#form').reset();
+                
             })
-            
         }
     </script>
-    </script>
+    <!-- <script>
+        function download() {
+            if (screen.width < 1024) {
+                document.getElementById("viewport").setAttribute("content", "width=1200px");
+            }
+            // const data = document.getElementById('downloadJPG');
+            // let canvas = document.createElement("canvas");
+            // let html2canvasOptions = {
+            //     allowTaint: true,
+            //     removeContainer: true,
+            //     backgroundColor: null,
+            //     imageTimeout: 15000,
+            //     logging: true,
+            //     scale: 2,
+            //     useCORS: true
+            // };
+            // // Few necessary setting options
+            // const contentDataURL = canvas.toDataURL('image/png')
+            const imgWidth = 210;
+            const pageHeight = 295;
+            const imgHeight = canvas.height * imgWidth / canvas.width;
+            let heightLeft = imgHeight;
+            // let pdf = new jspdf('p', 'mm', 'a4', true); // A4 size page of PDF
+            // let position = 0;
+
+            // pdf.addImage(contentDataURL, 'PNG', 0, position, imgWidth, imgHeight, undefined, 'FAST');
+            heightLeft -= pageHeight;
+
+            // while (heightLeft >= 0) {
+            //     position = heightLeft - imgHeight;
+            //     pdf.addPage();
+            //     pdf.addImage(contentDataURL, 'PNG', 0, position, imgWidth, imgHeight, undefined, 'FAST')
+            //     heightLeft -= pageHeight;
+            // }
+            // pdf.save('resume.pdf'); // Generated PDF
+
+            if (screen.width < 1024) {
+                document.getElementById("viewport").setAttribute("content", "width=device-width, initial-scale=1");
+            }
+        }
+        document.querySelector('#save-local').addEventListener('click', function (e) {
+            download();
+        })
+    </script> -->
+    <!-- <script>
+        $(document).ready(function () {
+            $("#save-local").click(function () {
+
+                html2canvas(document.getElementById("downloadJPG"), {
+                    onrendered: function (canvas) {
+
+                        var imgData = canvas.toDataURL('image/png');
+                        console.log('Report Image URL: ' + imgData);
+                        var doc = new jsPDF('p', 'mm', [297, 210]); //210mm wide and 297mm high
+
+                        doc.addImage(imgData, 'PNG', 10, 10);
+                        doc.save('sample.pdf');
+                    }
+                });
+            });
+        })
+    </script> -->
 </body>
 
 </html>
