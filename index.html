@@ -304,7 +304,7 @@
     <button id="btn">click</button>
     <a href="" id="click" style="display: none;">下載</a>
 
-    <script src="./html2canvas.js"></script>
+    <script src="https://unpkg.com/html2canvas@1.0.0-rc.4/dist/html2canvas.js"></script>
     <script>
         window.onload = function () {
             var IMAGE_URL;
@@ -350,7 +350,7 @@
             }
             function downloadBase64(dataUrl, filename) {
                 var imageFile, href
-                var downloadLink = document.querySelector('#click');
+                const downloadLink = document.createElement('a')
                 // var downloadLink = document.getElementById('dl-hidden')
                 try {
                     var blob = dataURLtoBlob(dataUrl)
@@ -370,15 +370,15 @@
             
             //兼容ios15手机系统字体导致的问题
 
-            var isiOS = !!navigator.userAgent.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/); //ios终端
-            if (isiOS) {
-                var ios_ver = parseInt(navigator.userAgent.toLowerCase().match(/cpu iphone os (.*?) like mac os/)[1].replace(/\_/g, '.'));
-                if (ios_ver >= 15) {
-                    if (btn) {
-                        btn.setAttribute('style', 'font-family:PingFangSC-Regular');
-                    }
-                }
-            }
+            // var isiOS = !!navigator.userAgent.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/); //ios终端
+            // if (isiOS) {
+            //     var ios_ver = parseInt(navigator.userAgent.toLowerCase().match(/cpu iphone os (.*?) like mac os/)[1].replace(/\_/g, '.'));
+            //     if (ios_ver >= 15) {
+            //         if (btn) {
+            //             btn.setAttribute('style', 'font-family:PingFangSC-Regular');
+            //         }
+            //     }
+            // }
 
             btn.addEventListener('click', function (e) {
                 takeScreenshot();
