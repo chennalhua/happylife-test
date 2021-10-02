@@ -120,7 +120,7 @@
 
 <body ontouchstart="">
     <div id="content">
-        <!-- <img src="" class="copyImage"> -->
+        <img src="" class="copyImage">
         <div class="letter-content" id="letter" style="background-color: pink">
             <div class="bg-wapper bg-life-light-pink lifebg-fixed-bottom p-3" id="downloadImage">
                 <div class="container">
@@ -439,7 +439,7 @@
             };
             html2canvas(shareContent, opts).then(function (canvas) {
                 IMAGE_URL = canvas.toDataURL("image/png");
-                // document.querySelector('.copyImage').setAttribute('src', IMAGE_URL);
+                document.querySelector('.copyImage').setAttribute('src', IMAGE_URL);
             })
         }
 
@@ -475,9 +475,9 @@
         }
 
         // document.querySelector('.letter-title').textContent(new Date().toLocaleString())
-        takeScreenshot();
         // var curStyle = 0;
         document.querySelector('#save-local').addEventListener('click',function (e) {
+            takeScreenshot();
             downloadBase64(IMAGE_URL, 'demo.png')
         })
     }
