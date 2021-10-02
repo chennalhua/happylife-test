@@ -304,7 +304,8 @@
     <button id="btn">click</button>
     <a href="" id="click" style="display: none;">下載</a>
 
-    <script src="https://unpkg.com/html2canvas@1.0.0-rc.4/dist/html2canvas.js"></script>
+    <!-- <script src="https://unpkg.com/html2canvas@1.0.0-rc.4/dist/html2canvas.js"></script> -->
+    <script src="./html2canvas.js"></script>
     <script>
         window.onload = function () {
             var IMAGE_URL;
@@ -314,7 +315,7 @@
                 var height = shareContent.offsetHeight; //获取dom 高度
                 var canvas = document.createElement("canvas"); //创建一个canvas节点
 
-                var scale = 2; //定义任意放大倍数 支持小数
+                var scale = 1; //定义任意放大倍数 支持小数
                 canvas.width = width * scale; //定义canvas 宽度 * 缩放
                 canvas.height = height * scale; //定义canvas高度 *缩放
                 canvas.getContext("2d") //获取context,设置scale
@@ -322,7 +323,6 @@
                 // var rect = shareContent.getBoundingClientRect();//获取元素相对于视察的偏移量
                 // canvas.getContext("2d").translate(-rect.left,-rect.top);//设置context位置，值为相对于视窗的偏移量负值，让图片复位
                 var opts = {
-                    dpi: 144,
                     scale: scale, // 添加的scale 参数
                     canvas: canvas, //自定义 canvas
                     logging: true, //日志开关
@@ -332,9 +332,9 @@
                 };
                 html2canvas(shareContent, opts).then(function (canvas) {
                     IMAGE_URL = canvas.toDataURL("image/png");
-                    downloadBase64(IMAGE_URL, 'demo.png')
+                    // document.querySelector('.copyImage').setAttribute('src',IMAGE_URL);
+                    downloadBase64(IMAGE_URL, '合成图.png')
                 })
-
             }
 
             function dataURLtoBlob(dataurl) {
@@ -348,6 +348,7 @@
                 }
                 return new Blob([u8arr], { type: mime })
             }
+
             function downloadBase64(dataUrl, filename) {
                 var imageFile, href
                 const downloadLink = document.createElement('a')
@@ -366,27 +367,13 @@
                     // downloadLink.remove()
                 }
             }
-            let btn = document.querySelector('#btn');
-            
-            //兼容ios15手机系统字体导致的问题
 
-            // var isiOS = !!navigator.userAgent.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/); //ios终端
-            // if (isiOS) {
-            //     var ios_ver = parseInt(navigator.userAgent.toLowerCase().match(/cpu iphone os (.*?) like mac os/)[1].replace(/\_/g, '.'));
-            //     if (ios_ver >= 15) {
-            //         if (btn) {
-            //             btn.setAttribute('style', 'font-family:PingFangSC-Regular');
-            //         }
-            //     }
-            // }
-
-            btn.addEventListener('click', function (e) {
-                takeScreenshot();
-
+            document.querySelector('#btn').addEventListener('click',function(){
+                takeScreenshot()
             })
-
             
         }
+    </script>
     </script>
 </body>
 
