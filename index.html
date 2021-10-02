@@ -317,7 +317,7 @@
                 var scale = 2; //定义任意放大倍数 支持小数
                 canvas.width = width * scale; //定义canvas 宽度 * 缩放
                 canvas.height = height * scale; //定义canvas高度 *缩放
-                canvas.getContext("2d").scale(scale, scale); //获取context,设置scale
+                canvas.getContext("2d") //获取context,设置scale
 
                 // var rect = shareContent.getBoundingClientRect();//获取元素相对于视察的偏移量
                 // canvas.getContext("2d").translate(-rect.left,-rect.top);//设置context位置，值为相对于视窗的偏移量负值，让图片复位
