@@ -1,0 +1,20 @@
+body,html,h1,h2,h3,p{
+    margin: 0;
+    padding: 0;
+}
+
+.bg-happy-pink{
+    background-color: pink;
+}
+
+.bg-fixbottom{
+    background: no-repeat;
+    background-size: auto;
+    background-position: 50% bottom;
+}
+
+.bg-wall{
+    background-image: url('./assets/bg-wall.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
