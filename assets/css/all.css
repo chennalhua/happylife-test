@@ -1,7 +1,18 @@
-body,html{
+/* ios15 文字問題 */
+body,html{ 
   font-family: Helvetica, Tahoma, Arial, 'PingFang SC', 'Hiragino Sans GB', 'Heiti SC', STXihei, 'Microsoft YaHei',
     SimHei;
 
+}
+
+@font-face {
+  font-family: "Meng";
+  src: url('../../font/MENGNACHAOGANGHEI-1.OTF');
+}
+
+@font-face {
+  font-family: "B";
+  src: url('../../font/NOTOSANSCJKTC-MEDIUM.OTF');
 }
 
 .bg-life-light-pink {
@@ -42,6 +53,7 @@ canvas {
 }
 
 .bg-wapper h3 {
+  font-family: "B";
   font-size: 18px;
   font-weight: bolder;
   color: #2c65c2;
