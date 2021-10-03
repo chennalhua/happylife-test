@@ -1,7 +1,10 @@
 /* ios15 文字問題 */
 body,html{ 
-  font-family: Helvetica, Tahoma, Arial, 'PingFang SC', 'Hiragino Sans GB', 'Heiti SC', STXihei, 'Microsoft YaHei',
-    SimHei;
+  /* ios15 文字問題 */
+  font-family: -apple-system, BlinkMacSystemFont, 'Microsoft JhengHei','Segoe UI', 'Roboto', 'Oxygen',
+  'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  sans-serif,Helvetica, Tahoma, Arial, 'PingFang SC', 'Hiragino Sans GB', 'Heiti SC', STXihei, 'Microsoft YaHei',
+  SimHei;
 }
 
 @font-face {
